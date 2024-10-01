@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { PixelRatio, Text, useWindowDimensions, View } from 'react-native';
 
 import { EditScreenInfo } from './EditScreenInfo';
 
@@ -9,17 +9,16 @@ type ScreenContentProps = {
 };
 
 export const ScreenContent = ({ title, path, children }: ScreenContentProps) => {
+  const { width, height } = useWindowDimensions();
+  const pixelRatio = PixelRatio.get();
+  console.log({ title, path, children, width, height, pixelRatio });
   return (
-    <View className={styles.container}>
-      <Text className={styles.title}>{title}</Text>
-      <View className={styles.separator} />
-      <EditScreenInfo path={path} />
-      {children}
+    <View className="flex-1  bg-pink-200 p-14">
+      <View className="h-[200px] w-[200px] bg-red-500" />
+      <View className="h-[200px] w-[200px] bg-green-500" />
+      <Text>
+        123 <Text className="text-red-700">123</Text>
+      </Text>
     </View>
   );
-};
-const styles = {
-  container: `items-center flex-1 justify-center`,
-  separator: `h-[1px] my-7 w-4/5 bg-gray-200`,
-  title: `text-xl font-bold`,
 };

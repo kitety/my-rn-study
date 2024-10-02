@@ -7,7 +7,7 @@ export default function App() {
   return (
     <>
       <ScreenContent title="Home" path="App.tsx" />
-      <StatusBar style="auto" />
+      <StatusBar style="auto" backgroundColor="red" hidden />
     </>
   );
 }

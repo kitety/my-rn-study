@@ -11,6 +11,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "ahooks": "^3.8.1",
     "expo": "^51.0.35",
     "expo-status-bar": "~1.12.1",
     "nativewind": "next",
